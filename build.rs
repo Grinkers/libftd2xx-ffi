@@ -137,9 +137,9 @@ fn linker_options() {
     assert!(
         !(target_os == "windows" && target_env == "gnu"),
         r"
-    libftd2xx-ffi static linking is not supported when using the windows-gnu target.
-    The static library (ftd2xx.lib) is MSVC-compiled and ABI-incompatible with the GNU toolchain.
-    Use windows-msvc or disable `static` feature."
+libftd2xx-ffi static linking is not supported when using the windows-gnu target.
+The static library (ftd2xx.lib) is MSVC-compiled and ABI-incompatible with the GNU toolchain.
+Use windows-msvc or disable `static` feature."
     );
 
     println!("cargo:rustc-link-lib=static=ftd2xx");
